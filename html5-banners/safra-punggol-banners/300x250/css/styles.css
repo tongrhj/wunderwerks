@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/*************** ANIMATION *****************/
+#ad{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#banner {
+	position: absolute;
+	width:298px;
+	height:248px;
+	padding:0px;
+	overflow:hidden;
+	visibility: visible;
+	cursor: pointer;
+	border:1px solid #d4d1da;
+}
+
+.banner_bg{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:300px;
+	height:250px;
+	z-index: 0;
+}
+
+.in_frame{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: 1;
+	opacity: 0;
+}
+
+.outside_frame {
+	position:absolute;
+	top:0px;
+	left:-300px;
+	z-index:1;
+}
+
+.ontop_frame {
+	position:absolute;
+	top:-300px;
+	left:0px;
+	z-index:1;
+}
+
+.below_frame {
+	position:absolute;
+	top:300px;
+	left:0px;
+	z-index:1;
+}
+
+#image1{
+	animation: fade-in 1s ease-out .5s forwards, fade-out 1s ease-out 3s forwards;
+	-webkit-animation: fade-in 1s ease-out 1s forwards, fade-out 1s ease-out 3s forwards;
+}
+#copy1{
+	animation: slide-in 1s ease-out .5s forwards, slide-out 1s ease-out 3s forwards;
+	-webkit-animation: slide-in 1s ease-out .5s forwards, slide-out 1s ease-out 3s forwards;
+}
+#image2{
+	animation: fade-in 1s ease-out 3s forwards;
+	-webkit-animation: fade-in 1s ease-out 3s forwards;
+}
+#copy2{
+	animation: slide-in-from-bottom 1s ease-out 3s forwards, fade-out 1s ease-out 6s forwards;
+	-webkit-animation: slide-in-from-bottom 1s ease-out 3s forwards, fade-out 1s ease-out 6s forwards;
+}
+#copy3 {
+	animation: slide-in 1s ease-out 6s forwards;
+	-webkit-animation: slide-in 1s ease-out 6s forwards;
+}
+#cta {
+	animation: fade-in 1s ease-out 6s forwards;
+	-webkit-animation: fade-in 1s ease-out 6s forwards;
+}
+
+/*.............animation for firefox.................*/
+
+@keyframes fade-in {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+@keyframes fade-out {
+	from {
+		opacity:1;
+	}
+	to {
+		opacity:0;
+	}
+}
+
+@keyframes slide-in {
+	from {
+		left:-300px;
+	}
+	to {
+		left:0px;
+	}
+}
+@keyframes slide-out {
+	from {
+		opacity:1;
+		left: 0px;
+	}
+	to {
+		opacity:0;
+		left: -300px;
+	}
+}
+
+@keyframes slide-in-from-top {
+	from {
+		top:-300px;
+	}
+	to {
+		top:0px;
+	}
+}
+
+@keyframes slide-in-from-bottom {
+	from {
+		top:300px;
+	}
+	to {
+		top:0px;
+	}
+}
+
+/*......................chrome...................*/
+
+
+
+@-webkit-keyframes fade-in {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+@-webkit-keyframes fade-out {
+	from {
+		opacity:1;
+	}
+	to {
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes slide-in {
+	from {
+		left:-300px;
+	}
+	to {
+		left:0px;
+	}
+}
+@-webkit-keyframes slide-out {
+	from {
+		opacity:1;
+		left: 0px;
+	}
+	to {
+		opacity:0;
+		left: -300px;
+	}
+}
+
+@-webkit-keyframes slide-in-from-top {
+	from {
+		top:-300px;
+	}
+	to {
+		top:0px;
+	}
+}
+
+@-webkit-keyframes slide-in-from-bottom {
+	from {
+		top:300px;
+	}
+	to {
+		top:0px;
+	}
+}

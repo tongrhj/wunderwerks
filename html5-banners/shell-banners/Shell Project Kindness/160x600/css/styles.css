@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/*************** ANIMATION *****************/
+#ad{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#banner {
+	position: absolute;
+	width:158px;
+	height:598px;
+	padding:0px;
+	overflow:hidden;
+	visibility: visible;
+	cursor: pointer;
+	border:1px solid #d4d1da;
+}
+
+#banner_bg{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:160px;
+	height:600px;
+	background:#f7d117;
+	z-index: 0;
+}
+
+.banner_frame{
+	position:absolute;
+	top:0px;
+	left:160px;
+	z-index:1;
+	opacity:0;
+}
+
+#logo{
+	z-index: 2;
+	opacity: 1;
+	left:0px;
+}
+
+#image1{
+	animation: image-in 1s ease-out .5s forwards, image-out 1s ease-out 3s forwards;
+	-webkit-animation: image-in 1s ease-out 1s forwards, image-out 1s ease-out 3s forwards;
+}
+#image2{
+	animation: image-in 1s ease-out 3s forwards, image-out 1s ease-out 6s forwards;
+	-webkit-animation: image-in 1s ease-out 3s forwards, image-out 1s ease-out 6s forwards;
+}
+#image3{
+	animation: image-in 1s ease-out 6s forwards, image-out 1s ease-out 9s forwards;
+	-webkit-animation: image-in 1s ease-out 6s forwards, image-out 1s ease-out 9s forwards;
+}
+#image4{
+	animation: image-in 1s ease-out 9s forwards;
+	-webkit-animation: image-in 1s ease-out 9s forwards;
+}
+
+/*.............animation for firefox.................*/
+
+@keyframes image-in {
+	from {
+		opacity:0;
+		left:160px;
+	}
+	to {
+		opacity:1;
+		left:0px;
+	}
+}
+@keyframes image-out {
+	from {
+		opacity:1;
+		left: 0px;
+	}
+	to {
+		opacity:0;
+		left: -160px;
+	}
+}
+
+/*......................chrome...................*/
+
+@-webkit-keyframes image-in {
+	from {
+		opacity:0;
+		left:160px;
+	}
+	to {
+		opacity:1;
+		left:0px;
+	}
+}
+@-webkit-keyframes image-out {
+	from {
+		opacity:1;
+		left: 0px;
+	}
+	to {
+		opacity:0;
+		left: -160px;
+	}
+}

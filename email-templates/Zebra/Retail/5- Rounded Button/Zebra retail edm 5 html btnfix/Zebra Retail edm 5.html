@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZEBRA EDM</title>
+
+  <style type="text/css">
+    /* Client-specific Styles */
+    #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+    .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.*/
+    .backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
+    a img {border:none;}
+    .image_fix {display:block;}
+    p {margin: 0px 0px !important;}
+    table td {border-collapse: collapse;}
+    table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+    a {color: #0a8cce;text-decoration: none;text-decoration:none!important;}
+    /*STYLES*/
+    table[class=full] { width: 100%; clear: both; }
+    .header-txt{
+      font-size:12px;
+    }
+    td.header-txt{
+      /*padding-top:30px;*/
+    }
+    *[class="showDesktop"] {
+      overflow: visible !important;
+      float: none !important;
+      display: block !important;
+      line-height:100% !important;
+    }
+
+    *[class="showMobile"] {
+      overflow: hidden !important;
+      float: left; !important;
+      display: none !important;
+      line-height: 0px !important;
+    }
+    .banner-title {
+      padding-right: 32px;
+    }
+    /*IPAD STYLES*/
+    @media only screen and (max-width:480px) {
+      body {
+        text-align: center !important;
+      }
+      a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: #0a8cce; /* or whatever your want */
+        pointer-events: none;
+        cursor: default;
+      }
+      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: #0a8cce !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+      td[class=devicewidth] {width: 100%!important;text-align:center!important;display:block !important; text-align:center!important;}
+      table[class=devicewidth] {width: 100%!important;text-align:center!important;}
+      table[class=devicewidthinner] {width: 100%!important;text-align:center!important;}
+      img[class=banner] {width: 100%!important;height:auto;}
+      img[class=colimg2] {width: 100%!important;height:auto}
+
+      .header-img img{
+        width:80%;
+      }
+      .header-txt{
+        font-size:10px;
+      }
+      td.header-txt{
+        padding-top:5px;
+      }
+      .col-copy{
+        padding-left:10px !important;
+        padding-right:10px !important;
+        text-align: center !important;
+      }
+      .banner-title{
+        font-size:25px !important;
+        padding-right: 15px;
+      }
+      .banner-subtitle {
+        font-size: 18px !important;
+      }
+      .banner-text{
+        padding-right:15px !important;
+      }
+    }
+    @media only screen and (max-device-width:480px) {
+      body {
+        text-align: center !important;
+      }
+      a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: #0a8cce; /* or whatever your want */
+        pointer-events: none;
+        cursor: default;
+      }
+      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: #0a8cce !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+      td[class=devicewidth] {width: 100%!important;text-align:center!important;display:block !important; text-align:center!important;}
+      table[class=devicewidth] {width: 100%!important;text-align:center!important;}
+      table[class=devicewidthinner] {width: 100%!important;text-align:center!important;}
+      img[class=banner] {width: 100%!important;height:auto;}
+      img[class=colimg2] {width: 100%!important;height:auto}
+
+      .header-img img{
+        width:80%;
+      }
+      .header-txt{
+        font-size:10px;
+      }
+      td.header-txt{
+        padding-top:5px;
+      }
+      .col-copy{
+        padding-left:10px !important;
+        padding-right:10px !important;
+        text-align: center !important;
+      }
+      .banner-title{
+        font-size:25px !important;
+        padding-right: 15px;
+      }
+      .banner-subtitle {
+        font-size: 16px;
+      }
+      .banner-text{
+        padding-right:15px !important;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Start of preheader -->
+  <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader" >
+    <tbody>
+      <tr>
+        <td>
+          <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="header-img" bgcolor="#000000" >
+                            <tbody>
+                              <tr>
+                                <td align="left" valign="middle" style="font-family: Arial, sans-serif; font-size: 10px;color: #903537" st-content="viewonline">
+                                  <img src="images/logo.jpg">
+                                </td>
+                                <td align="right" class="header-txt" valign="middle" style="font-family: Arial, sans-serif; font-size: 12px;color: #903537;padding-right:20px" st-content="viewonline">
+                                  <span style="color:white;" class="header-txt" >If you can't see this email,    <a href="#" class="header-txt" style="color:white;;">click here.</a><br><a href="#" class="header-txt" style="color:#ffffff;font-size:10px;font-weight:300;text-decoration:none;border-bottom: 2px solid #9e9e9e;">View Web Version</a></span><br>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <!-- start of images -->
+                        <td align="center" st-image="banner-image">
+                          <div>
+                            <a target="_blank" href="#"><img width="600" border="0" height="281" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="images/banner.jpg" class="banner"></a>
+                          </div>
+                          <!--<div class="showMobile" style="overflow:hidden; float:left; display:none; line-height:0px;">
+                            <img width="600" border="0" height="551" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="images/banner-mobile.jpg" class="banner">
+                          </div>-->
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td width="100%" height="30"></td>
+                      </tr>
+                      <tr>
+
+
+                        <tr>
+                          <!-- start of images -->
+                          <td align="center" st-image="banner-image">
+                            <!-- col 1 -->
+                            <table width="395" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                              <tbody>
+                              <!-- spacing
+                              <tr>
+                                <td width="100%" height="10"></td>
+                              </tr>-->
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:16px; color:#000000;padding-left:20px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  <span style="font-size: 33px; font-weight: bold; line-height: 1; text-transform: uppercase;" class="banner-title">
+                                    CAPTURE THE SALE, EVERY WAY
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 20px; line-height:20px; color:#000000;padding-left:20px; padding-right:72px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  <span style="font-size: 18px; font-weight: bold; line-height: 1; text-transform: uppercase;" class="banner-text">
+                                    Transform the checkout experience with 2D Array Imagers
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:16px; color:#000000;padding-left:20px; padding-right:40px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  The main interaction shoppers have with your store often comes at the point of sale. You need fast and accurate transactions to keep your lanes flowing smoothly and keep your customers returning time after time.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:16px; color:#000000;padding-left:20px; padding-right:40px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  2D array imagers assist with this by improving productivity and giving you the ability to capture the data that matters most – whether you are scanning traditional printed 1D barcodes or a 2D mobile coupon presented on a mobile device.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:16px; color:#000000;padding-left:20px; padding-right:50px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  Discover how 2D array imagers speed checkouts and improve customer loyalty.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <tr>
+                                <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:18px; color:#000000;padding-left:20px; padding-right:30px; text-align:left;" st-content="2colcontent1" class="col-copy">
+                                  <a href="http://online.zebra.com/zebraexperience-zebras-powerful-2d-imaging-solutions-for-retail"><img width="180" border="0" height="48" alt="" style="border:none; outline:none; text-decoration:none;" src="images/read-more.png"></a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td width="100%" height="20"></td>
+                              </tr>
+                              <!-- end of text content table -->
+                            </tbody>
+                          </table>
+                          <!-- end of spacing -->
+                          <!-- col 2 -->
+                          <table width="180" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                            <tbody>
+                              <!-- spacing
+                              <tr>
+                                <td width="100%" height="10"></td>
+                              </tr>-->
+                              <tr>
+                                <td>
+                                  <table bgcolor="#efecec" width="180" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                    <tbody>
+                                      <tr>
+                                        <td width="100%" height="20"></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:18px; color: #010101;padding-left:50px; padding-right:50px; text-align:left;" st-content="2colcontent2" class="col-copy" align="center">
+
+                                          <img src="images/image1.jpg" style="border:none; outline:none; text-decoration:none;" width="80" height="78" style="max-width:100%;">
+                                        </td>
+                                      </tr>
+                                      <!-- <tr>
+                                        <td width="100%" height="20">
+                                          <table width="180" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                              <tbody>
+                                                <tr>
+                                                  <td width="100%" align="center" class="devicewidth">
+                                                  <img src="images/image1.jpg" class="image" width="80" height="78" style="max-width:100%;">
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr> -->
+                                      <tr>
+                                        <td width="100%" height="20"></td>
+                                      </tr>
+<!--                                       <tr>
+                                        <td style="font-family: Arial, sans-serif; font-size: 12px; line-height:18px; color: #000000;padding-left:15px;padding-right:10px; text-align:left;font-weight:bold;text-transform:uppercase;" st-content="2colcontent2">
+                                          Make sharper decisions with cutting-edge digital intelligence
+                                        </td>
+                                      </tr> -->
+                                      <tr>
+                                        <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:16px; color: #010101;padding-left:15px; padding-right:15px; text-align:left;" st-content="2colcontent2" class="col-copy">
+                                        The DS7708 vertical slot imager can read them all – 1D, 2D, printed and electronic barcodes – as fast as your cashiers can slide items past the scan window. Compact in design, the DS7708 boosts a field of view that is over 50% larger than the competition.
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td width="100%" height="20"></td>
+                                      </tr>
+                                      <tr>
+                                        <td bgcolor="#007cb0" style="font-family: Arial, sans-serif; font-size: 15px;color: black;line-height:18px; text-align:center;padding-top:15px;padding-bottom:15px;">
+                                         <a href="http://online.zebra.com/zebraexperience-solutions-point-of-sale-solutions" style="color:#ffffff;text-decoration:none;">LEARN MORE</a>
+                                       </td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+                               </td>
+                             </tr>
+                             <!-- end of text content table -->
+                           </tbody>
+                         </table>
+                       </td>
+                     </tr>
+
+                   </tbody>
+                 </table>
+                 <!-- end of image -->
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </td>
+     </tr>
+   </tbody>
+ </table>
+
+ <!-- Start of seperator -->
+ <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="backgroundTable">
+  <tr>
+    <td width="100%" height="10"></td>
+  </tr>
+</table>
+<!-- End of seperator -->
+
+<!-- End of seperator -->
+<!-- Start Full Text -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="backgroundTable" st-sortable="full-text">
+  <tbody>
+    <tr>
+      <td>
+        <table bgcolor="#dbd8d6" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+          <tbody>
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <tr>
+                      <td bgcolor="#dbd8d6" class="container-padding footer-text" align="center" style="font-family:Arial, sans-serif;font-size:10px;line-height:16px;color:#000000;padding-top:20px;padding-bottom:15px;padding-left:24px;padding-right:24px">
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon1.png" width="32" height="26" alt="IN" style="border:0;" /></a>
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon2.png" width="30" height="26" alt="Twitter" style="border:0;" /></a>
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon3.png" width="25" height="26" alt="Facebook" style="border:0;" /></a>
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon4.png" width="25" height="26" alt="Youtube" style="border:0;" /></a>
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon5.png" width="28" height="26" alt="Chat" style="border:0;" /></a>
+                        <a href="https://yoursite.com/YOUR_USER_NAME"><img src="images/icon6.png" width="27" height="26" alt="RSS" style="border:0;" /></a>
+                        <span style="font-size:10px;color:#000000;"> <br><br>This email was sent to *|EMAIL|* <br>
+                          forward to a friend&nbsp;&nbsp;&nbsp;&nbsp;subscribe to this list&nbsp;&nbsp;&nbsp;&nbsp;unsubscribe&nbsp;&nbsp;&nbsp;&nbsp;update profile<br><br>
+                          Zebra.com&nbsp;&nbsp;|&nbsp;&nbsp;Privacy&nbsp;&nbsp;|&nbsp;&nbsp; &copy;2016 ZIH Corp. All rights reserved. Zebra and the stylized Zebra head are trademarks of ZIH Corp., registered in many jurisdictions worldwide. All other trademarks are the property of their respective owners.</span>
+                        </td>
+                      </tr>
+                      <!-- Spacing -->
+                      <tr>
+                        <td width="100%" height="20"></td>
+                      </tr>
+                      <!-- Spacing -->
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- End of postfooter -->
+
+</body>
+</html>

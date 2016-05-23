@@ -1,0 +1,588 @@
+/* Custom Page Styles */
+/*---
+Pink: #fa4b98
+Dark Pink: #89294a
+---*/
+/* Custom fonts */
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../fonts/GothamBook.eot');
+    src: url('../fonts/GothamBook.eot') format('embedded-opentype'),
+         url('../fonts/GothamBook.woff2') format('woff2'),
+         url('../fonts/GothamBook.woff') format('woff'),
+         url('../fonts/GothamBook.ttf') format('truetype'),
+         url('../fonts/GothamBook.svg#GothamBook') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../fonts/GothamMedium.eot');
+    src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
+         url('../fonts/GothamMedium.woff2') format('woff2'),
+         url('../fonts/GothamMedium.woff') format('woff'),
+         url('../fonts/GothamMedium.ttf') format('truetype'),
+         url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('../fonts/GothamBold.eot');
+    src: url('../fonts/GothamBold.eot') format('embedded-opentype'),
+         url('../fonts/GothamBold.woff2') format('woff2'),
+         url('../fonts/GothamBold.woff') format('woff'),
+         url('../fonts/GothamBold.ttf') format('truetype'),
+         url('../fonts/GothamBold.svg#GothamBold') format('svg');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('fonts/GothamLight.eot');
+    src: url('fonts/GothamLight.eot') format('embedded-opentype'),
+         url('fonts/GothamLight.woff2') format('woff2'),
+         url('fonts/GothamLight.woff') format('woff'),
+         url('fonts/GothamLight.ttf') format('truetype'),
+         url('fonts/GothamLight.svg#GothamLight') format('svg');
+}
+
+
+
+/* Navbar Styles */
+.icon-bar {
+	background-color: #fff;
+	height: 4px;
+}
+
+.navbar-inverse {
+	background-color: #df2576;
+	font-size: 1.2rem;
+}
+
+.navbar-fixed-top {
+	border: 0;
+}
+
+.navbar-inverse .navbar-toggle {
+	margin: 0;
+	height: 50px;
+	background-color: #89294a;
+	border-radius: 0;
+	padding: 9px 14px;
+}
+
+.navbar-toggle .icon-bar {
+	height: 4px;
+	width: 26px;
+	border-radius: 2px;
+}
+
+.navbar-inverse .navbar-toggle {
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+	background-color: #89294a;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 700;
+font-family: 'GothamMedium';
+
+}
+
+.nav>li>a {
+	padding: 15px 35px;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #89294a;
+}
+
+.nav>li>a.socialLink {
+	padding: 15px 33px;
+}
+
+@media screen and (min-width: 768px){
+	.nav>li>a.socialLink {
+		padding: 13px 4px;
+	}
+
+	.nav>li>a.socialLink span {
+		margin-right: 0px;
+	}
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border: 0;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+	.nav>li>a {
+		padding: 15px 20px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.navbar-right {
+		margin-right: 15px;
+	}
+}
+
+/* Content Styles */
+body {
+	background-color: #0d0d0d;
+	color: #d3d3d3;
+	font-size: 16px;
+	font-family: 'GothamBook', sans-serif;
+}
+
+.page {
+	margin-top:50px;
+}
+
+.text-primary {
+	font-weight: 700;
+	font-family: 'GothamMedium';
+	color: #fa4b98;
+}
+
+.bg-primary {
+	color: #fff;
+	background-color: #fa4b98;
+}
+
+.bg-primary h1 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+h1 {
+	color: #fa4b98;
+	font-weight: 700;
+	font-family: 'GothamBold';
+	text-transform: uppercase;
+}
+
+.h6.small {
+	color: #827d7d;
+	font-weight: 300;
+	padding-top: 10px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	color: #fff;
+    background-color: #fa4b98;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+	font-family: 'GothamBold';
+    width: 100%;
+    border-radius: 0;
+}
+
+.full-width {
+	padding: 0;
+}
+
+.bg-left, .bg-right {
+	position: absolute;
+}
+
+.bg-left {
+	left: 0px;
+}
+
+.bg-right {
+	right: 0px;
+}
+
+/* Disable carousel default glyphicon */
+.glyphicon-chevron-left:before, .glyphicon-chevron-right:before {
+	content: none;
+}
+
+/* Section Mini */
+.Section_mini {
+	background: #fff;
+  	min-height: 32px;
+  	max-height: 142px;
+  	color: #0095c9;
+  	font-weight: 700;
+	font-family: 'GothamBold';
+}
+
+.Section_mini .row {
+	display: flex;
+	align-items: center;
+}
+
+.Section_mini p {
+	padding: 1em 0;
+    margin-bottom: 0;
+}
+
+.Section_mini img {
+	width: auto !important;
+}
+
+.Section_mini-copy {
+	padding-right: 250px;
+}
+
+@media all and (max-width: 420px) {
+	/* Hacky way to fit iPhone 5 */
+	.Section_mini-copy {
+		font-size: 0.8em;
+		padding-right: 200px;
+	}
+	.cta-bubble {
+		right: 0 !important;
+	}
+}
+
+.cta-bubble {
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+}
+
+/* Section 0 Styles */
+.bg1-wrapper {
+	background: url("../images/bg1.jpg") #0d0d0d no-repeat;
+	background-size: cover;
+}
+
+.Section_0 {
+	padding-bottom: 2em;
+}
+
+.Section_0 p {
+	color: #c8c9cb;
+	font-size: 2rem;
+	padding: 0 2rem;
+}
+
+@media screen and (min-width: 768px){
+	.Section_0 h1 {
+		margin-top: 2em;
+	}
+}
+
+/* Section 1 Styles */
+.Section_1 {
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 2em;
+	color: #d3d3d3;
+	padding: 2em 0;
+	position: relative;
+}
+
+.Section_1-image {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.Section_1-header {
+	margin-top: -15px;
+	margin-bottom: -15px;
+}
+
+.Section_1-lead {
+	padding: 65px 0 35px 0;
+}
+
+.Section_1 .small {
+	font-size: 60%;
+}
+
+.Section_1 .col-lg-12, .Section_1 .col-lg-6 {
+	padding: 0 15px;
+}
+
+@media all and (max-width: 320px){
+	.Section_1 .bg-right.visible-xs {
+		display: none !important;
+	}
+}
+
+@media all and (min-width: 768px){
+	.Section_1-header {
+		max-width: none;
+	}
+
+	.Section_1 .col-lg-12, .Section_1 .col-lg-6 {
+		padding: 0 45px;
+	}
+}
+
+/* Section 2 Styles */
+.Section2and3-wrapper {
+	background: url("../images/bg2.jpg") #0d0d0d no-repeat;
+	background-size: cover;
+}
+
+.Section_2 {
+	padding: 5em 0;
+}
+
+@media all and (min-width: 992px) {
+	.grid-row {
+		display: flex;
+	}
+}
+
+.grid, .grid-feature {
+	padding: 0;
+}
+
+.Section_2 h1 {
+	font-size: 22px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.grid img {
+	width: 100%;
+/*	border-bottom: 4px solid #0d0d0d;
+	border-right: 4px solid #0d0d0d;*/
+}
+
+@media all and (min-width: 1000px) {
+	.Section_2 h1 {
+		font-size: 36px;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.grid img {
+		border: 0;
+	}
+}
+
+.Section_2 .bg-right {
+	bottom: 40%;
+	right: 1em;
+	z-index: 0;
+}
+
+@media all and (min-width: 768px) {
+	.Section_2 .bg-right {
+		right: 3em;
+	}
+}
+
+.Section_2 .bg-primary {
+	padding: 4em 6em;
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.Section_2 .grid-feature {
+	position: relative;
+	background-color: #0d0d0d;
+}
+
+.Section_2 .grid-feature-image {
+	width: 100%;
+}
+
+.Section_2 .grid-feature h2 {
+	font-weight: 100;
+	font-family: 'GothamLight';
+	font-size: 1.5em;
+	margin: 0;
+	background-color: #fa4b98;
+	padding: 0.8em 0.5em;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.Section_2 .carousel-control.right {
+	opacity: 1;
+}
+
+@media all and (min-width: 1000px) {
+	.Section_2 .carousel-control.right {
+		background-image: none;
+		margin-right: -60px;
+	}
+}
+
+
+/* Section 3 Styles */
+.Section_3 {
+	padding: 0;
+	/*background: #0d0d0d;
+  	background: linear-gradient(
+  		to right bottom,
+  		rgba(0,0,4,0) 55%, 
+  		#df2576 55%);*/
+}
+
+.Section_3 img {
+	width: 100%;
+}
+
+/* Section 4 Styles */
+.Section_4 .row {
+	margin-right: 0;
+}
+
+.Section_4 img {
+	max-width:100%;
+	width: 100%;
+}
+
+.Section_4 .carousel-control .glyphicon-chevron-left, 
+.Section_4 .carousel-control .glyphicon-chevron-right, 
+.Section_4 .carousel-control .icon-next, 
+.Section_4 .carousel-control .icon-prev {
+	width: 43px;
+	height: 75px;
+	top: 40%;
+}
+
+@media all and (min-width: 768px) {
+	.Section_4 .carousel-control .glyphicon-chevron-left, 
+	.Section_4 .carousel-control .glyphicon-chevron-right {
+		top: 50%;
+	}
+}
+
+.videoCarousel-btn-right {
+	cursor: pointer;
+}
+
+/* Section 5 Styles */
+.Section5andfooter-wrapper {
+	background: url("../images/bg3.jpg") #0d0d0d no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	position: relative;
+}
+
+.Section_5 {
+	padding: 5em 0;
+	position: relative;
+}
+
+.Section5andfooter-wrapper .bg-left {
+	bottom: 0;
+	left: 0;
+}
+
+.Section_5 a, 
+.Section_5 a:hover, 
+.Section_5 a:active, 
+.Section_5 a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.Section_5-item {
+	background-color: #df2576;
+	padding: 1em 1.5em;
+	margin: 1em 1em;
+	min-height: 330px;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	justify-content: flex-end;
+}
+
+.Section_5-item:first-of-type {
+	margin-left: 0;
+}
+
+.Section_5-item:last-of-type {
+	margin-right: 0;
+}
+
+.Section_5-item h3 {
+	color: #fff;
+	font-weight: 700;
+	font-family: 'GothamMedium';
+}
+
+.Section_5 .h6.small {
+	color: #fff;
+}
+
+.modal-item .close, 
+.modal-item .close:focus, 
+.modal-item .close:hover {
+	color: #fff;
+	font-weight: 100;
+	font-family: 'GothamLight';
+	opacity: 1;
+	font-size: 1em;
+/*	margin: -0.5em;*/
+	z-index: 9999;
+}
+
+.modal-dialog {
+	min-width: 60%;
+}
+
+.modal-item .modal-content {
+	background-color: #2c111d;
+	background-color: rgba(44, 17, 29, 0.9);
+	border: 1px solid #df2576;
+	border-radius: 0;
+	padding: 1em;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+	.modal-dialog {
+		min-width: 60%;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.modal-dialog {
+		min-width: 40%;
+	}
+}
+
+.modal-item .modal-header {
+	border-bottom: 1px solid #fa4b98;
+}
+
+.modal-item .modal-title {
+	font-weight: 100;
+	font-family: 'GothamLight';
+	font-size: 24px;
+}
+
+.modal-item .modal-body {
+	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+}
+
+/* Footer Styles */
+footer {
+	margin-top: 2em;
+	color: #9c9c9c;
+	font-size: 10px;
+}
+
+footer a, 
+footer a:hover, 
+footer a:focus, 
+footer a:active {
+	color: #9c9c9c;
+}

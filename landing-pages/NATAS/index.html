@@ -1,0 +1,491 @@
+
+<?php
+	//ini_set('display_errors', 1);
+	//error_reporting(E_ALL | E_STRICT);
+	$attendAs = "";
+	$organization = "";
+	$salutation = "";
+	$givenName = "";
+	$familyName = "";
+	$jobTitle = "";
+	$countryCode = "";
+	$areaCode = "";
+	$telephoneNo = "";
+	$country = "";
+	$cityState = "";
+	$email_1 = "";
+	$email_2 = "";
+	$errOrganization = "";
+	$errSalutation = "";
+	$errGivenName = "";
+	$errFamilyName = "";
+	$errJobTitle = "";
+	$errCountryCode = "";
+	$errAreaCode = "";
+	$errTelephoneNo = "";
+	$errCountry = "";
+	$errCityState = "";
+	$errEmail_1 = "";
+	$errEmail_2 = "";
+	$errAttendAs = "";
+	$submitted = false;
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+		if(isset($_POST["attendAs"])){$attendAs = trim($_POST["attendAs"]);}
+		if(isset($_POST["organization"])){$organization = trim($_POST["organization"]);}
+		if(isset($_POST["salutation"])){$salutation = trim($_POST["salutation"]);}
+		if(isset($_POST["givenName"])){$givenName = trim($_POST["givenName"]);}
+		if(isset($_POST["familyName"])){$familyName = trim($_POST["familyName"]);}
+		if(isset($_POST["jobTitle"])){$jobTitle = trim($_POST["jobTitle"]);}
+		if(isset($_POST["countryCode"])){$countryCode = trim($_POST["countryCode"]);}
+		if(isset($_POST["areaCode"])){$areaCode = trim($_POST["areaCode"]);}
+		if(isset($_POST["telephoneNo"])){$telephoneNo = trim($_POST["telephoneNo"]);}
+		if(isset($_POST["country"])){$country = trim($_POST["country"]);}
+		if(isset($_POST["cityState"])){$cityState = trim($_POST["cityState"]);}
+		if(isset($_POST["email_1"])){$email_1 = trim($_POST["email_1"]);}
+		if(isset($_POST["email_2"])){$email_2 = trim($_POST["email_2"]);}
+		$allOk = true;
+		if($attendAs == ''){$errAttendAs = "Please select one.";$allOk = false;}
+		if($organization == ''){$errOrganization = "Please enter organization.";$allOk = false;}
+		if($salutation == ''){$errSalutation = "Please select salutation.";$allOk = false;}
+		if($givenName == ''){$errGivenName = "Please enter given name.";$allOk = false;}
+		if($familyName == ''){$errFamilyName = "Please enter family name.";$allOk = false;}
+		if($jobTitle == ''){$errJobTitle = "Please enter job title.";$allOk = false;}
+		if($countryCode == ''){$errCountryCode = "Please enter country code.";$allOk = false;}
+		/* if($areaCode == ''){$errAreaCode = "Please enter area code.";$allOk = false;} */
+		if($telephoneNo == ''){$errTelephoneNo = "Please enter telephone number.";$allOk = false;}
+		if($country == ''){$errCountry = "Please select country.";$allOk = false;}
+		if($cityState == ''){$errCityState = "Please enter city state.";$allOk = false;}
+		include('emailValidator.php');
+		if(!validEmail($email_1)){$errEmail_1 = "Please enter a valid email.";$allOk = false;}
+		if($email_2 != '' && !validEmail($email_2)){$errEmail_2 = "Please enter a valid email.";$allOk = false;}
+		if($allOk){
+			include('db.php');
+			$stmt = $dbh->prepare("insert into register(attend_as, organization, salutation, given_name, family_name, job_title, country_code, area_code, telephone_number, country, city_state, email_1, email_2) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			$stmt->bindParam('1', $attendAs);
+			$stmt->bindParam('2', $organization);
+			$stmt->bindParam('3', $salutation);
+			$stmt->bindParam('4', $givenName);
+			$stmt->bindParam('5', $familyName);
+			$stmt->bindParam('6', $jobTitle);
+			$stmt->bindParam('7', $countryCode);
+			$stmt->bindParam('8', $areaCode);
+			$stmt->bindParam('9', $telephoneNo);
+			$stmt->bindParam('10', $country);
+			$stmt->bindParam('11', $cityState);
+			$stmt->bindParam('12', $email_1);
+			$stmt->bindParam('13', $email_2);
+			$submitted = $stmt->execute();
+			if($submitted){
+				//echo "Insert ok!";
+			}else{
+				print_r($stmt->errorInfo());
+			}
+		}
+	}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--<link rel="icon" href="favicon.ico">-->
+
+	<title>NATAS Home</title>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="css/themo_animations.css">-->
+	
+	<script type='text/javascript' src='js/modernizr-2.7.0.min.js'></script>
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="js/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Custom styles for this template -->
+	<link href="css/carousel.css" rel="stylesheet">
+</head>
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
+	<div class="navbar-inner">
+		<div class="container">			
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon"></span>Menu
+				</button>
+				<!--<button type="button" id="menu-btn">
+					<span class="icon"></span>Menu
+				</button>-->
+				<div id="navbar" class="navbar-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="index.html"><img src="images/atf_logo.png" alt="atf_logo Logo"></a></li>
+						<li><h4>16-20 January 2017 Singapore<h4></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event Information <span class="menu-arrow"></span></a> 
+							<ul class="dropdown-menu">
+								<li><a href="#">ATF Objectives & Components</a></li>
+								<li><a href="#">Official Meetings</a></li>
+								<li><a href="#">Association Meetings</a></li>
+							</ul>
+						</li>
+						<li><a href="#ceoMessage" rel="" id="anchor1" class="anchorLink">CEO's Message</a></li>
+						<li><a href="#regster" rel="" id="anchor2" class="menuBtn">Register</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="page">
+	<div class="Section_0 home">
+		<div class="">
+			<div class="row">
+				<div class="col-sm-12">		
+					<img class="responsive" src="images/home/home_banner.jpg" alt="First slide">
+					<div class="">
+						<div class="carousel-caption">
+							<h1>shaping our tourism <br/>journey together</h1>
+							<a href="#eventInfo" rel="" id="anchor3" class="anchorLink"><img src="images/down_icon.png" alt="down_icon Logo"></a>
+							<a name="eventInfo" id="eventInfo"><strong>&#32;</strong></a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+
+
+	<!-- Home Event Information  -->
+
+	<div class="Section_1 home">
+		<div class="container">
+			<!-- One column of text below the carousel -->
+			<div class="row">
+				<div class="col-sm-12 text-animation hide-animation">					
+					<h2>event information</h2>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row ">				
+				<div class="col-sm-6 image-animation hide-animation borderRight">		
+					<img class="img-square" src="images/home/event1.png" alt="Generic placeholder image" >
+				</div>
+				<div class="col-sm-6 text-animation hide-animation">		
+					<h4>asean tourism meetings</h4>
+					<h3>16-20 january 2017</h3>
+					<br/><br/>
+					<h4>travex</h4>
+					<h3>18-20 january 2017</h3>
+					<div class="events">
+						<div class="locationIcon"></div>
+						<div>
+							<p class="venue">Travex Venue:</p>
+							<p class="location">Marina bay sands expo & convention centre</p>
+						</div>
+					</div>
+					<p><button class="btn submit">Getting Here</button></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-animation hide-animation">		
+					<br/><br/>
+					<h5>Singapore will play host to the 36th ASEAN Tourism Forum (ATF) from 16 to 20 January 2017 with the theme "Shaping Our Tourism Journey Together". ATF 2017 also coincides with the 50th Anniversary of ASEAN.</h5>
+					<br/><br/>
+					<p>Building on five decades of successful history, the ATF 2017 programme encompasses the Meetings of ASEAN Tourism Ministers and leaders from ASEAN National Tourism Organizations, ASEAN Airlines Meeting, ASEANTA Board Meeting and Annual General Meeting, media briefings and the all-important travel exchange, TRAVEX.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-animation hide-animation">		
+					<br/><br/>
+					<h3>travex 2017</h3>
+					<br/><br/>
+					<p>TRAVEX will be held in Singapore from 18 to 20 January 2017 during ATF 2017. With a target of 500 exhibition booths and 1600 delegates, TRAVEX is a one-stop shop for the latest in ASEAN tourism products and services. Additionally, TRAVEX offers great networking opportunities and is the place to gain insights on ASEAN tourism trends.</p>
+					<br/><br/>
+					<p><a href="register.html">Register your interest</a> now and be notified when TRAVEX registration begins in mid-March 2016.</p>	
+					<a name="regster" id="regster"><strong>&#32;</strong></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Home Sign Up Section  -->
+	<div class="Section_2 home">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-animation hide-animation">
+					<h2>Register Your Interest for TRAVEX 2017</h2>
+					<h5>I wish to attend TRAVEX 2017 as:</h5>
+					<p>(Select the appropriate box) </p>					
+				</div>
+			</div>
+			<div class="signUp">
+				<?php if(!$submitted){ ?>
+				<form action="index.php" method="post" name="currentform">
+					<div class="row">						
+						<div class="col-sm-12">	
+							<div class="radioDiv">
+								<div class="buyer">Buyer</div>
+								<div class="exhibitor">Exhibitor (Seller)</div>
+								<div class="mediabtn">Media</div>
+							</div>
+							<div class="hiddenRadio">
+								<input name="attendAs" type="radio" id="buyer" value="Buyer" <?php if($attendAs == 'Buyer'){ ?>checked="checked"<?php } ?> />&nbsp;Buyer
+								<input type="radio" name="attendAs" id="xxhibitor" value="Exhibitor" <?php if($attendAs == 'Exhibitor'){ ?>checked="checked"<?php } ?> />&nbsp;Exhibitor
+								<input type="radio" name="attendAs" id="media" value="Media" <?php if($attendAs == 'Media'){ ?>checked="checked"<?php } ?> />&nbsp;Media
+								<span class="error">&nbsp;<?php echo $errAttendAs; ?></span>
+							</div>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12">	
+							<label><span class="title">Organisation<span class="symbol">*</span></span>
+								<input type="text" name="organization" id="organization" value="<?php echo $organization; ?>" /><span class="error">&nbsp;<?php echo $errOrganization; ?></span>
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-4">	
+							<div class="select-style">
+								<select name="salutation" id="salutation">
+									<option value="" <?php if($salutation == ''){ ?>selected="selected"<?php } ?>></option>
+									<option value="Mr" <?php if($salutation == 'Mr'){ ?>selected="selected"<?php } ?>>Mr</option>
+									<option value="Mrs" <?php if($salutation == 'Mrs'){ ?>selected="selected"<?php } ?>>Mrs</option>
+								</select>
+								<span class="error">&nbsp;<?php echo $errSalutation; ?></span>
+							</div>
+						</div>
+						<div class="col-sm-4">	
+							<label><span class="title">Given Name<span class="symbol">*</span></span>
+								<input type="text" name="givenName" id="givenName" value="<?php echo $givenName; ?>" /><span class="error">&nbsp;<?php echo $errGivenName; ?></span>
+							</label>
+						</div>
+						<div class="col-sm-4">	
+							<label><span class="title">Family Name<span class="symbol">*</span></span>
+								<input type="text" name="familyName" id="familyName" value="<?php echo $familyName; ?>" /><span class="error">&nbsp;<?php echo $errFamilyName; ?></span>
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12">	
+							<label><span class="title">Job Title<span class="symbol">*</span></span>
+								<input type="text" name="jobTitle" id="jobTitle" value="<?php echo $jobTitle; ?>" /><span class="error">&nbsp;<?php echo $errJobTitle; ?></span>
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-4">	
+							<div class="select-style">
+								<select>
+									<option value="Country Code">Country Code<span class="symbol">*</span></option>
+									<option value="Singapore">Singapore</option>
+									<option value="Malaysia">Malaysia</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">	
+							<label><span class="title">Area Code</span>
+								<input type="text" />
+							</label>
+						</div>
+						<div class="col-sm-4">	
+							<label><span class="title">Telephone Number<span class="symbol">*</span></span>
+								<input type="text" />
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12">	
+							<label><span class="title">Country<span class="symbol">*</span></span>
+								<input type="text" />
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12">	
+							<label><span class="title">City/State<span class="symbol">*</span></span>
+								<input type="text" />
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-6">	
+							<label><span class="title">1st Email(Primary)<span class="symbol">*</span></span>
+								<input type="text" />
+							</label>
+						</div>
+						<div class="col-sm-6">	
+							<label><span class="title">2nd Email(Optional)</span>
+								<input type="text" />
+							</label>
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12 requiredText">	
+							<p><span class="symbol">*</span> Required Fields</p>	
+						</div>
+					</div>
+					<div class="row">						
+						<div class="col-sm-12 submitDiv">	
+							<p><button class="btn submit">Submit</button></p>	
+						</div>
+					</div>									
+				</form>		
+				<?php }else{ ?>
+					<p>Thank you for your submission!</p>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+
+	<!-- Home About Us Section  -->
+	<div class="Section_3 home">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="imgDiv"><img alt="Generic placeholder image" class="img-square" src="images/home/ceo.png"></div>
+				</div>
+				<div class="col-md-8">		
+					<br/><br/><br/>
+					<h3>"There is much more to discover of Singapore and ASEAN, and I warmly welcome you to ATF 2017!"</h3>
+					<p class="uppercase"><span class="name">Lionel Yeo</span><span class="spacebar">|</span>Chief Executive<span class="spacebar">|</span>Singapore Tourism Board</p>
+					<p><a class="btn" href="">Read STB's Message to Delegates </a></p>
+				</div>
+				<a name="ceoMessage" id="ceoMessage"><strong>&#32;</strong></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="">
+			<div class="row">
+				<div class="col-sm-12 footerLinks">		
+					<div class="container">
+						<p>Organised by <span class="heldin">held in</span><span class="official">official travex 2017 secretariat</span></p>
+						<!-- bar code &#124;--> 
+					</div>
+				</div>
+				<div class="col-sm-12 socialLinks">	
+					<p>
+						<a href="#"><img class="img-square" src="images/stb_logo.png" alt="stb_logo"></a>
+						<a href="#"><img class="img-square" src="images/yousingapore_logo.png" alt="yousingapore_logo"></a>
+						<a href="#"><img class="img-square" src="images/natas_logo.png" alt="natas_logo"></a>
+						<a href="#"><img class="img-square" src="images/hotel_logo.png" alt="hotel_logo"></a>
+						<a href="#"><img class="img-square" src="images/aseanta_logo.png" alt="aseanta_logo"></a>
+						<a href="#"><img class="img-square" src="images/asean_logo.png" alt="asean_logo"></a>
+						<a href="#"><img class="img-square" src="images/asean1_logo.png" alt="asean1_logo"></a>
+						<a href="#"><img class="img-square" src="images/seasia_logo.png" alt="seasia_logo"></a>
+					</p>
+				</div>
+				<!--<div class="col-sm-12 footerLinks">		
+					<p><a href="aboutus.html">About Us</a> &#124; <a href="careers.html">Career</a> &#124; <a href="faq.html">Frequently Asked Questions</a> &#124; <a href="partner.html">Become a Partner</a> &#124; <a href="contact.html">Contact</a></p>
+				</div>-->
+				<div class="col-sm-12 footerCopy">		
+					<p>&#169; 2016 natas. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/holder.min.js"></script>
+<script type="text/javascript" src="js/readxml.js"></script>
+<script src="js/common.js"></script>
+<!--<script src="js/theme_animation.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+	
+	/*$(window).load(function() {
+		
+		var isTouchAnimation = is_touch_device(false);
+		//alert(isTouchAnimation);
+		if(!isTouchAnimation){ 	
+			animate_scrolled_into_view(jQuery('.Section_1 .text-animation'),'slideDown','100'); 
+			animate_scrolled_into_view(jQuery('.Section_1 .image-animation'),'slideUp','200'); 
+			animate_scrolled_into_view(jQuery('.Section_2 .text-animation'),'slideLeft','100'); 
+			animate_scrolled_into_view(jQuery('.Section_2 .image-animation'),'slideRight','200');
+			animate_scrolled_into_view(jQuery('.Section_3 .text-animation'),'slideRight','400'); 
+			animate_scrolled_into_view(jQuery('.Section_4 .text-animation'),'slideLeft','100');
+			animate_scrolled_into_view(jQuery('.Section_4 .image-animation'),'slideRight','200'); 
+			animate_scrolled_into_view(jQuery('.Section_5 .text-animation'),'slideRight','100'); 
+			animate_scrolled_into_view(jQuery('.Section_6 .text-animation'),'slideLeft','100'); 
+			animate_scrolled_into_view(jQuery('.Section_6 .image-animation'),'slideRight','200');
+			animate_scrolled_into_view(jQuery('.Section_7 .box-animation1'),'slideUp','100'); 
+			animate_scrolled_into_view(jQuery('.Section_7 .box-animation2'),'slideUp','300'); 
+			animate_scrolled_into_view(jQuery('.Section_7 .box-animation3'),'slideUp','500'); 
+			animate_scrolled_into_view(jQuery('.Section_8 .text-animation'),'slideUp','100');
+			animate_scrolled_into_view(jQuery('.Section_9 .text-animation'),'slideDown','100');
+			animate_scrolled_into_view(jQuery('.Section_10 .image-animation1'),'slideRight','100');
+			animate_scrolled_into_view(jQuery('.Section_10 .image-animation2'),'slideLeft','100');
+			
+			var scrollTimeout;  // global for any pending scrollTimeout
+			
+			$(window).scroll(function() {
+				if (scrollTimeout) {
+					// clear the timeout, if one is pending
+					clearTimeout(scrollTimeout);
+					scrollTimeout = null;
+				}
+				scrollTimeout = setTimeout(scrollHandler, 0);
+			});			
+			scrollHandler = function () {
+				if(!is_touch_device(false)){ // Disable for Mobile
+					animate_scrolled_into_view(jQuery('.Section_1 .text-animation'),'slideDown','100'); 
+					animate_scrolled_into_view(jQuery('.Section_1 .image-animation'),'slideUp','200'); 
+					animate_scrolled_into_view(jQuery('.Section_2 .text-animation'),'slideLeft','100'); 
+					animate_scrolled_into_view(jQuery('.Section_2 .image-animation'),'slideRight','200');
+					animate_scrolled_into_view(jQuery('.Section_3 .text-animation'),'slideRight','400'); 
+					animate_scrolled_into_view(jQuery('.Section_4 .text-animation'),'slideLeft','100');
+					animate_scrolled_into_view(jQuery('.Section_4 .image-animation'),'slideRight','200'); 
+					animate_scrolled_into_view(jQuery('.Section_5 .text-animation'),'slideRight','100'); 
+					animate_scrolled_into_view(jQuery('.Section_6 .text-animation'),'slideLeft','100'); 
+					animate_scrolled_into_view(jQuery('.Section_6 .image-animation'),'slideRight','200');
+					animate_scrolled_into_view(jQuery('.Section_7 .box-animation1'),'slideUp','100'); 
+					animate_scrolled_into_view(jQuery('.Section_7 .box-animation2'),'slideUp','300'); 
+					animate_scrolled_into_view(jQuery('.Section_7 .box-animation3'),'slideUp','500'); 
+					animate_scrolled_into_view(jQuery('.Section_8 .text-animation'),'slideUp','100');
+					animate_scrolled_into_view(jQuery('.Section_9 .text-animation'),'slideDown','100');
+					animate_scrolled_into_view(jQuery('.Section_10 .image-animation1'),'slideRight','100');
+					animate_scrolled_into_view(jQuery('.Section_10 .image-animation2'),'slideLeft','100');
+
+				}
+			};
+		};
+		
+	});*/
+</script>
+
+
+</body>
+</html>

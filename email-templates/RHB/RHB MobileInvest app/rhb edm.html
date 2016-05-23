@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDM</title>
+  <style type="text/css">
+    /* Client-specific Styles */
+    #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+    .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.*/
+    .backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;max-width:100%;}
+    a img {border:none;}
+    .image_fix {display:block;}
+    p {margin: 0px 0px !important;}
+    table td {border-collapse: collapse;}
+    table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+    a {color: #0a8cce;text-decoration: none;text-decoration:none!important;}
+    /*STYLES*/
+    table[class=full] { width: 100%; clear: both; }
+    .header-txt{
+      font-size:12px;
+    }
+    td.header-txt{
+      /*padding-top:30px;*/
+    }
+    *[class="showDesktop"] {
+      overflow: visible !important;
+      float: none !important;
+      display: block !important;
+      line-height:100% !important;
+    }
+
+    *[class="showMobile"] {
+      overflow: hidden !important;
+      float: left; !important;
+      display: none !important;
+      line-height: 0px !important;
+    }
+
+    .pt-xs {
+      padding-top: 10px;
+    }
+
+    .pt-sm {
+      padding-top: 30px;
+    }
+
+    .pt-md {
+      padding-top: 60px;
+    }
+
+    .pt-xl {
+      padding-top: 90px;
+    }
+
+    /*IPAD STYLES*/
+    @media only screen and (max-width:480px) {
+      a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: #0a8cce; /* or whatever your want */
+        pointer-events: none;
+        cursor: default;
+      }
+      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: #0a8cce !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+      td[class=devicewidth] {width: 100%!important;text-align:center!important;display:block !important; text-align:center!important;}
+      table[class=devicewidth] {width: 100%!important;text-align:center!important;}
+      table[class=devicewidthinner] {width: 100%!important;text-align:center!important;}
+      img[class=banner] {width: 100%!important;height:auto;}
+      img[class=colimg2] {width: 100%!important;height:auto}
+
+      .header-img img{
+        width:80%;
+      }
+      .header-txt{
+        font-size:10px;
+      }
+      td.header-txt{
+        padding-top:5px;
+      }
+      .col-copy{
+        padding-left:10px !important;
+        padding-right:10px !important;
+      }
+      .pt-xs, .pt-sm, .pt-md, .pt-xl {
+        padding-top: 10px !important;
+      }
+      .banner-title{
+        font-size:25px !important;
+      }
+      .banner-text{
+        padding-right:15px !important;
+      }
+    }
+    @media only screen and (max-device-width:480px) {
+      a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: #0a8cce; /* or whatever your want */
+        pointer-events: none;
+        cursor: default;
+      }
+      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: #0a8cce !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+      td[class=devicewidth] {width: 100%!important;text-align:center!important;display:block !important; text-align:center!important;}
+      table[class=devicewidth] {width: 100%!important;text-align:center!important;}
+      table[class=devicewidthinner] {width: 100%!important;text-align:center!important;}
+      img[class=banner] {width: 100%!important;height:auto;}
+      img[class=colimg2] {width: 100%!important;height:auto}
+
+      .header-img img{
+        width:80%;
+      }
+      .header-txt{
+        font-size:10px;
+      }
+      td.header-txt{
+        padding-top:5px;
+      }
+      .col-copy{
+        padding-left:10px !important;
+        padding-right:10px !important;
+      }
+      .pt-xs, .pt-sm, .pt-md, .pt-xl {
+        padding-top: 10px !important;
+      }
+      .banner-title{
+        font-size:25px !important;
+      }
+      .banner-text{
+        padding-right:15px !important;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+<!-- Start of Hero Table -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+  <tbody>
+    <tr>
+      <td>
+        <!-- Text Content table -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+          <tbody>
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Hero -->
+                    <tr>
+                      <td align="center" st-image="banner-image">
+                        <div>
+                          <img width="600" border="0" height="645" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="images/hero.jpg" class="banner">
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- End Hero -->
+
+                    <!-- Hero Text -->
+                    <tr>
+                      <td align="center">
+                        <table align="left" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="30"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:30px; text-align:left;" class="col-copy">
+                                Dear Valued Customer,
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:30px; text-align:left;" class="col-copy">
+                                With a fresh look, more intuitive interface and added trading tools the new RHBInvest mobile app 2.0 makes it easier than ever to invest in the stock market on-the-go.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:30px; text-align:left;" class="col-copy">
+                                As one of our valued customers, we’d like to give you exclusive priority access to the new app before its public release. If you have any feedback on the app, we’d also love to hear from you at <span style="text-decoration: underline;"><a href="mailto:rhbsec.enquiries@rhbgroup.com">rhbsec.enquiries@rhbgroup.com</a></span>.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:30px; text-align:left;" class="col-copy">
+                                Download the new RHBInvest mobile app 2.0 now and experience trading like never before!
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:30px; text-align:left;" class="col-copy">
+                                <em>Note: All forms of trading and investments carry risks. Such activities may not be suitable for everyone.</em>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- End Hero Text -->
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end of text content table -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Hero Table -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="backgroundTable">
+  <tr>
+    <td width="100%" height="30"></td>
+  </tr>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of 4 Col Table -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+  <tbody>
+    <tr>
+      <td>
+        <!-- Text Content table -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+          <tbody>
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Hero Text -->
+                    <tr>
+                      <td align="center">
+                        <!-- spacing -->
+                        <table width="30" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end of spacing -->
+                         <!-- col 1 -->
+                        <table width="66" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- image 1 -->
+                            <tr>
+                              <td width="100%" align="left" class="devicewidth">
+                                <img src="images/image1.jpg" border="0" alt="Image 1" width="64" height="64" hspace="0" vspace="0" style="max-width:100%;line-height:22px;" class="image">
+                              </td>
+                            </tr>
+                            <!-- end of image1 -->
+                            <tr>
+                              <td>
+                                <!-- start of text content table -->
+                                <table width="66" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                  <tbody>
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                    </tr>
+                                    <!-- Spacing -->
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td style="font-family: Arial, sans-serif; font-size: 14px; color: #ffffff; text-align:center; line-height: 14px;" st-content="3col-content3">
+                                        ........  ........
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end of text content table -->
+                          </tbody>
+                        </table>
+                        <!-- spacing -->
+                        <table width="10" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end of spacing -->
+                        <!-- col 2 -->
+                        <table width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- image 2 -->
+                            <tr>
+                              <td width="100%" align="center" class="devicewidth">
+                                <a href="https://play.google.com/store/apps/details?id=com.rhbinvestsg.v2.trademobile" target="_blank"><img src="images/image2.jpg" border="0" alt="Image 1" width="122" height="53" hspace="0" vspace="0" style="max-width:100%;line-height:22px;" class="image"></a>
+                              </td>
+                            </tr>
+                            <!-- end of image2 -->
+                            <tr>
+                              <td>
+                                <!-- start of text content table -->
+                                <table width="124" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                  <tbody>
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                    </tr>
+                                    <!-- Spacing -->
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td style="font-family: Arial, sans-serif; font-size: 14px; color: #ffffff; text-align:center; line-height: 14px;" st-content="3col-content3">
+                                        ..................... .............. ............... .................... ........
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end of text content table -->
+                          </tbody>
+                        </table>
+                        <!-- end of col 2 -->
+                        <!-- spacing -->
+                        <table width="10" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- col 3 -->
+                        <table width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- image3 -->
+                            <tr>
+                              <td width="100%" align="center" class="devicewidth">
+                                <a href="https://itunes.apple.com/sg/app/rhbinvest-sg-2.0-for-iphone/id1104598626?mt=8" target="_blank"><img src="images/image3.jpg" border="0" alt="Image 1" width="122" height="53" hspace="0" vspace="0" style="max-width:100%;line-height:22px;" class="image"></a>
+                              </td>
+                            </tr>
+                            <!-- end of image3 -->
+                            <tr>
+                              <td>
+                                <!-- start of text content table -->
+                                <table width="124" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                  <tbody>
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                    </tr>
+                                    <!-- Spacing -->
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td style="font-family: Arial, sans-serif; font-size: 14px; color: #ffffff; text-align:center; line-height: 14px;" st-content="3col-content3">
+                                        ..................... .............. ............... .................... ........
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end of text content table -->
+                          </tbody>
+                        </table>
+                        <!-- spacing -->
+                        <table width="10" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end of spacing -->
+                        <!-- col 4 -->
+                        <table width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- image4 -->
+                            <tr>
+                              <td width="100%" align="center" class="devicewidth">
+                                <a href="https://itunes.apple.com/sg/app/rhbinvest-sg-2.0-for-ipad/id1104607843?mt=8" target="_blank"><img src="images/image4.jpg" border="0" alt="Image 1" width="122" height="53" hspace="0" vspace="0" style="max-width:100%;line-height:22px;" class="image"></a>
+                              </td>
+                            </tr>
+                            <!-- end of image4 -->
+                            <tr>
+                              <td>
+                                <!-- start of text content table -->
+                                <table width="124" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                  <tbody>
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                    </tr>
+                                    <!-- Spacing -->
+                                    <!-- Spacing -->
+                                    <tr>
+                                      <td style="font-family: Arial, sans-serif; font-size: 14px; color: #ffffff; text-align:center; line-height: 14px;" st-content="3col-content3">
+                                        ..................... .............. ............... .................... ........
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- end of text content table -->
+                          </tbody>
+                        </table>
+                        <!-- spacing -->
+                        <table width="30" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                          <tbody>
+                            <tr>
+                              <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end of spacing -->
+                      </td>
+                    </tr>
+                    <!-- End Hero Text -->
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end of text content table -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of 4 Col Table -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="backgroundTable">
+  <tr>
+    <td width="100%" height="7"></td>
+  </tr>
+</table>
+<!-- End of seperator -->
+
+<!-- Start Divider -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+  <tbody>
+    <tr>
+      <td>
+        <!-- Border -->
+        <table width="600" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+          <tbody>
+            <tr>
+              <td width="20" valign="left" height="30" style="border-top: 1px solid #fff;font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+              <td width="560" height="30" style="border-top: 1px solid #000000;font-size:1px;line-height:1px;mso-line-height-rule: exactly;">&nbsp;</td>
+              <td width="20" valign="right" height="30" style="border-top: 1px solid #fff;font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- End Border -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End Divider -->
+
+<!-- Start 2 Columns -->
+
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+  <tbody>
+    <tr>
+      <td>
+        <!-- Text Content table -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+          <tbody>
+
+            <!-- 2 Col: Text - Image -->
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Vertical Spacing -->
+                    <tr>
+                      <td width="100%" height="10"></td>
+                    </tr>
+                    <!-- End Vertical Spacing -->
+
+                    <tr>
+                      <!-- Start of Content -->
+                      <td align="center">
+                        <!-- col text -->
+                        <table width="265" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- vertical spacing -->
+<!--                             <tr>
+                              <td width="100%" height="30"></td>
+                            </tr> -->
+                            <!-- end vertical spacing -->
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:0px; text-align:left;" class="col-copy pt-sm">
+                                <b>Search for stocks using company names or codes across multiple exchanges</b>
+                                <p style="padding-top:5px;padding-bottom:20px;">Find the stocks you want quickly.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col text -->
+
+                        <!-- col image -->
+                        <table width="333" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <tr>
+                              <td width="100%" align="left" class="devicewidth">
+                                <img src="images/screen_01.jpg" class="image" width="296" height="273" style="margin-bottom:-4px;">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col image -->
+                      </td>
+                      <!-- End of Content -->
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- 2 Col: Image - Text -->
+            <tr>
+              <td width="100%">
+                <table bgcolor="#f6f6f6" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Vertical Spacing -->
+                    <tr>
+                      <td width="100%" height="15"></td>
+                    </tr>
+                    <!-- End Vertical Spacing -->
+
+                    <tr>
+                      <!-- Start of Content -->
+                      <td align="center">
+                        <!-- col image -->
+                        <table width="333" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <tr>
+                              <td width="100%" align="left" class="devicewidth">
+                                <img src="images/screen_02.jpg" class="image" width="317" height="254" style="margin-bottom:-4px;">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col image -->
+
+                        <!-- col text -->
+                        <table width="265" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- vertical spacing -->
+                            <!-- <tr>
+                              <td width="100%" height="90"></td>
+                            </tr> -->
+                            <!-- end vertical spacing -->
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:0px; padding-right:30px; text-align:left;" class="col-copy pt-xl">
+                                <b>Trade with improved accuracy</b>
+                                <p style="padding-top:5px;padding-bottom:20px;">New intuitive buttons to reduce the need to manually key in figures.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col text -->
+
+                      </td>
+                      <!-- End of Content -->
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- 2 Col: Text - Image -->
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Vertical Spacing -->
+                    <tr>
+                      <td width="100%" height="30"></td>
+                    </tr>
+                    <!-- End Vertical Spacing -->
+
+                    <tr>
+                      <!-- Start of Content -->
+                      <td align="center">
+                        <!-- col text -->
+                        <table width="265" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- vertical spacing -->
+<!--                             <tr>
+                              <td width="100%" height="55"></td>
+                            </tr> -->
+                            <!-- end vertical spacing -->
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:30px; padding-right:0px; text-align:left;" class="col-copy pt-md">
+                                <b>Make better decisions with technical analysis</b>
+                                <p style="padding-top:5px;padding-bottom:20px;">Look at historical prices and plot technical indicators.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col text -->
+
+                        <!-- col image -->
+                        <table width="333" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <tr>
+                              <td width="100%" align="left" class="devicewidth">
+                                <img src="images/screen_03.jpg" class="image" width="328" height="266" style="margin-bottom:-4px;">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col image -->
+                      </td>
+                      <!-- End of Content -->
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- 2 Col: Image - Text -->
+            <tr>
+              <td width="100%">
+                <table bgcolor="#f6f6f6" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Vertical Spacing -->
+                    <tr>
+                      <td width="100%" height="15"></td>
+                    </tr>
+                    <!-- End Vertical Spacing -->
+
+                    <tr>
+                      <!-- Start of Content -->
+                      <td align="center">
+                        <!-- col image -->
+                        <table width="333" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <tr>
+                              <td width="100%" align="left" class="devicewidth">
+                                <img src="images/screen_04.jpg" class="image" width="323" height="249" style="margin-bottom:-4px;">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col image -->
+
+                        <!-- col text -->
+                        <table width="265" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- vertical spacing -->
+<!--                             <tr>
+                              <td width="100%" height="90"></td>
+                            </tr> -->
+                            <!-- end vertical spacing -->
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#414142;padding-left:0px; padding-right:30px; text-align:left;" class="col-copy pt-xl">
+                                <b>More advanced order type options</b>
+                                <p style="padding-top:5px;padding-bottom:20px;">Access market stop loss, good-till-date orders and more on SGX.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col text -->
+
+                      </td>
+                      <!-- End of Content -->
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- 2 Col - custom width: Text - Image -->
+            <tr>
+              <td width="100%">
+                <table bgcolor="#959595" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Vertical Spacing -->
+                    <!-- <tr>
+                      <td width="100%" height="30"></td>
+                    </tr> -->
+                    <!-- End Vertical Spacing -->
+
+                    <tr>
+                      <!-- Start of Content -->
+                      <td align="center">
+                        <!-- col text -->
+                        <table width="285" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <!-- vertical spacing -->
+                            <tr>
+                              <td width="100%" height="55"></td>
+                            </tr>
+                            <!-- end vertical spacing -->
+                            <tr>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; line-height:20px; color:#ffffff;padding-left:30px; padding-right:0px; text-align:left;" class="col-copy">
+                                <span style="font-size:25px;font-weight:bold;">Need help?</span>
+                                <p style="padding-top:5px;padding-bottom:20px;">
+                                  Contact our help desk at
+                                  <br>
+                                  Tel: (65) 6438-8810 or
+                                  <br>
+                                  Email: <a href="mailto:rhbsec.enquiries@rhbgroup.com"><span style="text-decoration: underline;color:#ffffff;">rhbsec.enquiries@rhbgroup.com</span></a>
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col text -->
+
+                        <!-- col image -->
+                        <table width="313" align="right" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                          <tbody>
+                            <tr>
+                              <td width="100%" align="right" class="devicewidth">
+                                <img src="images/screen_05.jpg" class="image" width="311" height="199" style="margin-bottom:-4px;"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end col image -->
+                      </td>
+                      <!-- End of Content -->
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+        <!-- end of text content table -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End 2 Columns -->
+
+<!-- Start Footer -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+  <tbody>
+    <tr>
+      <td>
+        <!-- Text Content table -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+          <tbody>
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tbody>
+                    <!-- Hero -->
+                    <tr>
+                      <!-- start of images -->
+                      <td align="center" st-image="banner-image">
+                        <div>
+                          <a target="_blank" href="http://www.rhbbank.com.sg"><img width="600" border="0" height="65" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="images/footer.jpg" class="banner"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- End Hero -->
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end of text content table -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End Footer -->
+</body>
+</html>
+

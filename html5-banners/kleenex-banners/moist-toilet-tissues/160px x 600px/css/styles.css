@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/*************** ANIMATION *****************/
+#ad{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#banner {
+	position: absolute;
+	width:160px;
+	height:600px;
+	padding:0px;
+	overflow:hidden;
+	visibility: visible;
+	cursor: pointer;
+	border:1px solid #d4d1da;
+}
+#logo{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+}
+#image1{
+	animation: fade-out .5s ease-out 3s forwards;
+	-webkit-animation: fade-out .5s ease-out 3s forwards;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+	opacity: 1;
+}
+#copy2{
+	animation: fade-in .5s ease-out 3.5s forwards, fade-out .5s ease-out 5.5s forwards;
+	-webkit-animation: fade-in .5s ease-out 3.5s forwards, fade-out .5s ease-out 5.5s forwards;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	opacity:0;
+}
+#image2{
+	animation: image2-in .5s ease-out 3.5s forwards;
+	-webkit-animation: image2-in .5s ease-out 3.5s forwards;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	opacity: 0;
+}
+#copy3{
+	animation: fade-in .5s ease-out 6s forwards;
+	-webkit-animation: fade-in .5s ease-out 6s forwards;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	opacity:0;
+}
+
+/*.............animation for firefox.................*/
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes image2-in {
+	from {
+		opacity:0;
+		transform: scale(2)
+	}
+	to {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
+
+
+/*......................chrome...................*/
+
+@-webkit-keyframes fade-out {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fade-in {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes image2-in {
+	from {
+		opacity:0;
+		transform: scale(2)
+	}
+	to {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
