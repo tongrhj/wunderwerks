@@ -1,0 +1,20 @@
+$preheader-bgcolor: $black;
+$preheader-color: $white;
+
+.preheader {
+  background: $preheader-bgcolor;
+  color: $preheader-color;
+
+  .columns {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.preheader-text {
+  padding: 23.5px $spacing--lg 9.5px $spacing--lg; //Magic Number to center with logo
+
+  a {
+    color: $white !important;
+  }
+}

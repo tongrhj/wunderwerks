@@ -1,0 +1,16 @@
+$sidebar-color: $black;
+$sidebar-font-weight: $global-light-font-weight;
+
+.callout--sidebar {
+  color: $sidebar-color;
+
+  h5 {
+    padding-right: 50px; //Magic number to get line break looking right at default
+  }
+
+  p {
+    font-size: 13px;
+    color: $sidebar-color;
+    font-weight: $sidebar-font-weight;
+  }
+}

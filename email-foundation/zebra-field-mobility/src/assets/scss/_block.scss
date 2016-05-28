@@ -1,0 +1,28 @@
+$block-black-bgcolor: $black;
+
+$block-footer-bgcolor: $medium-gray;
+$block-footer-color: $black;
+$block-footer-font-size: 10px;
+$block-footer-v-padding: $spacing--lg;
+$block-footer-h-padding: $spacing--sm;
+
+$padded-block-padding: $spacing--sm;
+
+.block--black {
+  background-color: $block-black-bgcolor;
+}
+
+.block--footer {
+  background-color: $block-footer-bgcolor;
+  padding: $block-footer-v-padding $block-footer-h-padding;
+
+  p {
+    color: $block-footer-color;
+    font-size: $block-footer-font-size;
+  }
+}
+
+.padded-block {
+  padding-top: $padded-block-padding;
+  padding-bottom: $padded-block-padding;
+}
