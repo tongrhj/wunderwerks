@@ -2,6 +2,7 @@ $block-black-bgcolor: $black;
 
 $block-footer-bgcolor: $medium-gray;
 $block-footer-color: $black;
+$block-black-color: $white;
 $block-footer-font-size: 10px;
 $block-footer-v-padding: $spacing--lg;
 $block-footer-h-padding: $spacing--sm;
@@ -10,6 +11,9 @@ $padded-block-padding: $spacing--sm;
 
 .block--black {
   background-color: $block-black-bgcolor;
+  h1, h2, h3, h4, h5, p {
+    color: $block-black-color;
+  }
 }
 
 .block--footer {
@@ -22,7 +26,18 @@ $padded-block-padding: $spacing--sm;
   }
 }
 
+// Helper classes
+
 .padded-block {
   padding-top: $padded-block-padding;
   padding-bottom: $padded-block-padding;
+  margin-bottom: 0;
+}
+
+
+// Buttons
+
+.warning td {
+  background-color: $yellow !important;
+  a { color: $black !important; }
 }
