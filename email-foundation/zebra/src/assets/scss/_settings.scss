@@ -39,7 +39,8 @@ $global-breakpoint: $global-width;
 // -------
 
 $grid-column-count: 12;
-$column-padding-bottom: $global-padding;
+// $column-padding-bottom: $global-padding;
+$column-padding-bottom: 0;
 
 // 3. Block Grid
 // -------------
@@ -59,18 +60,28 @@ $global-font-size: 14px;
 $body-line-height: 1.5;
 $header-font-family: $body-font-family;
 $header-font-weight: bold;
-$h1-font-size: 22px;
+// Field Mobility & Retail
+// $h1-font-size: 22px;
+// $h2-font-size: 20px;
+// $h3-font-size: 18px;
+// $h4-font-size: 16px;
+// $h5-font-size: 14px;
+// $h6-font-size: 12px;
+
+// Retail2d
+$h1-font-size: 36px;
 $h2-font-size: 20px;
-$h3-font-size: 18px;
+$h3-font-size: 16px;
 $h4-font-size: 16px;
 $h5-font-size: 14px;
 $h6-font-size: 12px;
-$header-margin-bottom: 10px;
-$paragraph-margin-bottom: 14px;
+
+$header-margin-bottom: $spacing--md;
+$paragraph-margin-bottom: $spacing--md;
 $small-font-size: 80%;
 $small-font-color: $white;
 $lead-font-size: $global-font-size * 1.25;
-$lead-line-height: 1.6;
+$lead-line-height: 1.5;
 $text-padding: 10px;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
@@ -127,7 +138,7 @@ $callout-border-alert: 1px solid darken($alert-color, 20%);
 // 7. Menu
 // -------
 
-$menu-item-padding: $spacing--lg*2 0 $spacing--lg 0;
+$menu-item-padding: 0 0 $spacing--lg 0;
 $menu-item-gutter: 5px;
 $menu-item-color: $black;
 
@@ -140,5 +151,3 @@ $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
-
-

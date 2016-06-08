@@ -1,6 +1,9 @@
 $preheader-bgcolor: $black;
 $preheader-color: $white;
 
+$preheader-link-color: $white;
+$preheader-link-border-bottom: 2px solid $dark-gray;
+
 .preheader {
   background: $preheader-bgcolor;
   color: $preheader-color;
@@ -12,9 +15,11 @@ $preheader-color: $white;
 }
 
 .preheader-text {
-  padding: 23.5px $spacing--lg 9.5px $spacing--lg; //Magic Number to center with logo
+  padding: 20px $spacing--lg 9.5px 0; //Magic Number to center with logo
+  margin-bottom: 0 !important;
 
   a {
-    color: $white !important;
+    color: $preheader-link-color !important;
+    border-bottom: $preheader-link-border-bottom;
   }
 }
